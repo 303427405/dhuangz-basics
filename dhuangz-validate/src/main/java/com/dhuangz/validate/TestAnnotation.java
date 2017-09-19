@@ -1,5 +1,6 @@
 package com.dhuangz.validate;
 
+import com.dhuangz.core.exceptions.DHZExceptionFactory;
 import com.dhuangz.validate.factory.StringValidate;
 import com.dhuangz.validate.pojo.vo.UserVO;
 
@@ -9,7 +10,8 @@ import com.dhuangz.validate.pojo.vo.UserVO;
 public class TestAnnotation {
 
     public static void main(String [] args){
-        UserVO userVO = new UserVO("asd","ccc");
+        /**抛出异常 ， 未做异常处理*/
+        UserVO userVO = new UserVO("aqq","ccqqqqqqqqqqqqqqqqqqqqqqqc");
         StringValidate.validateString(userVO);
 
     }

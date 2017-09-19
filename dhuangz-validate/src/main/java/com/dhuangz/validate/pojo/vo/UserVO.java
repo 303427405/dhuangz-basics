@@ -11,7 +11,7 @@ public class UserVO implements Serializable{
 
     private static final long serialVersionUID = -1645857771248687430L;
 
-    @StringAnnotation(code = "DHUANGZ_APPLICATION_ERROR_000001" , min = 2, max = 8)
+    @StringAnnotation(code = "DHUANGZ_VALIDATE_ERROR_00001" , min = 2, max = 8)
     private String name;
 
     private String address;

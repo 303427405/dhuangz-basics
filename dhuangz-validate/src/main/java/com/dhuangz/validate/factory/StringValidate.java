@@ -1,5 +1,6 @@
 package com.dhuangz.validate.factory;
 
+import com.dhuangz.core.exceptions.DHZExceptionFactory;
 import com.dhuangz.validate.RegexValidator;
 import com.dhuangz.validate.annotation.StringAnnotation;
 import org.apache.commons.lang3.StringUtils;
@@ -27,7 +28,7 @@ public class StringValidate {
                 Object value = field.get(object);
 
                 if(annotation.max() > 0 && value.toString().length() > annotation.max()){
-                    System.out.println("error");
+                    throw DHZExceptionFactory.create(annotation.code());
                 }
 
                 /**正则校验*/

@@ -1,8 +1,12 @@
 package com.dhuangz.core.exceptions;
 
+import com.dhuangz.core.ApplicationContextHelper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.ApplicationContextAware;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.support.ResourcePatternResolver;
 import org.springframework.util.StringUtils;
@@ -25,9 +29,6 @@ public class ExceptionDefinitions {
 
     private Logger logger = LoggerFactory.getLogger(ExceptionDefinitions.class);
 
-    @Autowired
-    private ResourcePatternResolver resourcePatternResolver;
-
     private Properties exceptionDefinitionProps;
 
 
@@ -37,9 +38,9 @@ public class ExceptionDefinitions {
      * @throws IOException
      */
     private Properties getDefinitions() throws IOException {
-
+        /**
         if(exceptionDefinitionProps == null){
-            Resource[] resources = resourcePatternResolver.getResources("classpath*:/props/error.properties");
+            Resource[] resources = ApplicationContextHelper.getContext().getBean(ResourcePatternResolver.class).getResources("classpath*:/props/error.properties");
             exceptionDefinitionProps = new Properties();
             for(Resource resource : resources){
                 InputStream stream = resource.getInputStream();
@@ -54,7 +55,9 @@ public class ExceptionDefinitions {
                     stream.close();
                 }
             }
-        }
+        }*/
+        exceptionDefinitionProps = new Properties();
+        exceptionDefinitionProps.setProperty("DHUANGZ_VALIDATE_ERROR_00001","用户名输入有误");
         return exceptionDefinitionProps;
     }
 
