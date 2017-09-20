@@ -1,6 +1,5 @@
 package com.dhuangz.core.exceptions;
 
-import org.springframework.context.ApplicationContext;
 
 /**
  * 东皇钟异常工厂类

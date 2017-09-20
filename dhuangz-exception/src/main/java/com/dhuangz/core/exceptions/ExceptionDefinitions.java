@@ -1,15 +1,9 @@
 package com.dhuangz.core.exceptions;
 
-import com.dhuangz.core.ApplicationContextHelper;
+import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.BeansException;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.ApplicationContextAware;
-import org.springframework.core.io.Resource;
-import org.springframework.core.io.support.ResourcePatternResolver;
-import org.springframework.util.StringUtils;
+
 
 
 import java.io.IOException;
@@ -58,6 +52,7 @@ public class ExceptionDefinitions {
         }*/
         exceptionDefinitionProps = new Properties();
         exceptionDefinitionProps.setProperty("DHUANGZ_VALIDATE_ERROR_00001","用户名输入有误");
+        exceptionDefinitionProps.setProperty("DHUANGZ_VALIDATE_ERROR_00002","用户数据为空");
         return exceptionDefinitionProps;
     }
 
