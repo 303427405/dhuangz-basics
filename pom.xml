@@ -9,11 +9,8 @@
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
     <modules>
-        <module>dhuangz-validate</module>
         <module>dhuangz-exception</module>
-        <module>dhaungz-redis</module>
         <module>dhuangz-validate</module>
-        <module>dhuangz-exception</module>
     </modules>
 
 
