@@ -11,6 +11,7 @@
     <modules>
         <module>dhuangz-exception</module>
         <module>dhuangz-validate</module>
+        <module>dhuangz-redis</module>
     </modules>
 
 
