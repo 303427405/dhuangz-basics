@@ -14,6 +14,7 @@
         <module>dhuangz-redis</module>
         <module>dhuangz-zookeeper</module>
         <module>dhuangz-zkadmin</module>
+        <module>dhuangz-utils</module>
     </modules>
 
 
